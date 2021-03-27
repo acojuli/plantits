@@ -1,0 +1,82 @@
+{
+    "categories": {
+        "Sansevierias":{"pictureUrl":"./images/category-1.png"},
+        "Monsteras":{"pictureUrl":"./images/category-2.png"},
+        "Peperomias":{"pictureUrl":"./images/category-3.png"},
+        "Alocasias":{"pictureUrl":"./images/category-4.png"},
+        "Dieffenbachias":{"pictureUrl":"./images/category-5.png"}
+
+},
+    "items":{
+            "j3Kl2d9i":{
+                "category":"Sansevierias",
+                "description":"Ese rincón difícil en donde no vive nada, ella se lo va a apropiar.",
+                "fullDescription":"Riego: en verano 1 vez por semana y en invierno cada 15 días",
+                "pictureUrl":"./images/sansevieria-trifasciata.jpg",
+                "price":580,
+                "stock":12,
+                "title":"Sansevieria trifasciata"},
+                
+            "5E4dfg3k":{
+                "category":"Monsteras",
+                "description":"Nada como ver la vida a través de las hojas de una Monstera, no?.",
+                "fullDescription":"Es una planta trepadora en su hábitat natural, no cortar sus largas raíces colgantes. Sus hojas están perforadas naturalmente para dejar pasar la luz y ofrecer menor resistencia a la lluvia y el viento. De gran desarrollo, ubicar en lugares amplios.",
+                "pictureUrl":"./images/monstera-deliciosa.jpg",
+                "price":1200,
+                "stock":2,
+                "title":"Monstera Deliciosa"},
+        
+            "JxK1EEtT":{
+                "category":"Peperomias",
+                "description":"La naturaleza da frutas, verduras, y sandías. A quién no le gusta la sandía?",
+                "fullDescription":"CUIDADOS . Fácil! Luz . Tolera poca uz indirecta. Riego . Dejar secar el sustrato entre riegos. Sustrato . Apto para plantas de interior, aireado y nutritivo. Humedad . Tolera poca humedad relativa ambiente.",
+                "pictureUrl":"./images/peperomia-watermelon.jpg",
+                "price":1280,
+                "stock":12,
+                "title":"Peperomia Watermelon"},
+
+            "gW1walU2":{
+                "category":"Alocasias",
+                "description":"Esta inmensa Alocasia, dicen que comparte las jungle vibes con la monstera.",
+                "fullDescription":"",
+                "pictureUrl":"./images/alocasia-amazonica.jpg",
+                "price":1125,
+                "stock":123,
+                "title":"Alocasia Amazónica"},
+
+            "jV3KMmQe":{
+                "category":"Peperomias",
+                "description":"Un buen comienzo para incursionar en la familia de las Peperomias.",
+                "fullDescription":"Hojas bien brillantes, y fácil de cuidar. Lindo arbusto. CUIDADOS . Fácil! Luz . Requiere alta luz indirecta. Riego . Dejar secar el sustrato entre riegos. Sustrato . Apto para plantas de interior, aireado y nutritivo. Humedad . Tolera poca humedad relativa ambiente.",
+                "pictureUrl":"./images/peperomia-obtusifolia.jpg",
+                "price":620,
+                "stock":72,
+                "title":"Peperomia Obtusifolia"},
+
+            "nBli3bjv":{
+                "category":"Dieffenbachias",
+                "description":"La familia de las Aglaonema y Dieffenbachia son súper fieles y fáciles de cuidar.",
+                "fullDescription":"CUIDADOS . Fácil! Luz . Tolera intermedia luz indirecta. Riego . Dejar secar el sustrato entre riegos. Sustrato . Apto para plantas de interior, aireado y nutritivo. Humedad . Tolera poca humedad relativa ambiente.",
+                "pictureUrl":"./images/aglaonema.jpg",
+                "price":990,
+                "stock":21,
+                "title":"Aglaonema"},
+
+            "wqDXMAbW":{
+                "category":"Sansevieria",
+                "description":"Sus hojas como rayos forman un arco de 180 grados. Como una estrella de mar.",
+                "fullDescription":"En sus genes corre la savia de la resiliencia y la tolerancia a la poca luz, viene de familia. Cada hoja, como rayos arman un arco de 180 grados, como si fuera una estrella. Algo que solo una Sansevieria podía hacer.",
+                "pictureUrl":"./images/sansevieria-starfish.jpg",
+                "price":1380,
+                "stock":43,
+                "title":"Sansevieria Starfish"},
+
+            "ynqtarAi":{
+                "category":"Monsteras",
+                "description":"Esta beba se caracteriza por tener hojas de color verde intenso.",
+                "fullDescription":"CUIDADOS . Fácil! Luz . Tolera intermedia luz indirecta. Riego . Dejar secar el sustrato entre riegos. Sustrato . Apto para plantas de interior, aireado y nutritivo. Humedad . Tolera intermedia humedad relativa ambiente.",
+                "pictureUrl":"./images/monstera-letcheriana.jpg",
+                "price":1100,
+                "stock":22,
+                "title":"Monstera Letcheriana"}           }
+        }

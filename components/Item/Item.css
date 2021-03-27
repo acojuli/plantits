@@ -1,0 +1,43 @@
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.description {
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    color: solid var(--color-beta);
+    margin: 1rem 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  max-width: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-alpha);
+  border-bottom: 2px solid var(--color-alpha);
+}
+
+.title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--color-gamma);
+  margin: 1rem 0;
+}

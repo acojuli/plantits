@@ -1,0 +1,39 @@
+.login {
+  z-index: 1;
+  padding: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.login__btn {
+  outline: white;
+}
+
+.login__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.login__session-container {
+  position: absolute;
+  z-index: 10;
+  right: 7rem;
+  height: 0;
+  padding: 1rem;
+  opacity: 0;
+  transition: height 0.3s ease;
+}
+
+.login__session-container.active {
+  display: block;
+  height: 2.5rem;
+  opacity: 1;
+  padding: 1rem;
+  border: solid 1px var(--color-alpha);
+  border-bottom: 2px solid var(--color-alpha);
+  background-color: white;
+  transition: height 0.6s ease, opacity 0.6s ease;
+}
+
+.login__session-container h5 {
+  margin: 0;
+}
