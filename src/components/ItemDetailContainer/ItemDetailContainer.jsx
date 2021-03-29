@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import ItemCount from '../ItemCount/ItemCount';
 import backIcon from "../../icons/back-icon.svg";
 
 function ItemDetailContainer() {
