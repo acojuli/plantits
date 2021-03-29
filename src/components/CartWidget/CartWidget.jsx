@@ -7,7 +7,7 @@ class CartWidget extends Component {
         super(props);
         this.state = {
             active: false,
-            cartQuantity: 1
+            cartQuantity: 0
         }
     }
 

@@ -36,7 +36,6 @@ function ItemDetailContainer() {
       </div>
       <div className="item-container" >
         <ItemDetail item={item} />
-        <ItemCount stock={item.stock} initial={0} />
       </div>
     </div>
     }

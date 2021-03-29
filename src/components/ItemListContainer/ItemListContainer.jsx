@@ -28,15 +28,20 @@ function ItemListContainer() {
         if (_items !== '') {
             if (_category !== undefined) {
                 let filtered = Object.keys(_items)
-                .filter((key) => {
-                    return _items[key].category === _category;
-                })
-                .reduce((obj, key) => {
-                    obj[key] = _items[key];
-                    return obj;
-                }, {});
+                    .filter((key) => {
+                        return _items[key].category === _category;
+                    })
+                    .reduce((obj, key) => {
+                        obj[key] = _items[key];
+                        return obj;
+                    }, {});
+
+                if (Object.keys(filtered).length === 0) {
+                    setItemsFiltered('no category found');
+                } else {
+                    setItemsFiltered(filtered);
+                }
                 
-                setItemsFiltered(filtered);
             } else {
                 setItemsFiltered(_items);
             }
@@ -59,14 +64,14 @@ function ItemListContainer() {
                     : < ItemCategories categories={categories} />
             }
             {
-                itemsFiltered === ''
-                    ? <h3 className="center-text">Cargando...</h3>
-                    : < ItemList items={itemsFiltered} />
+                itemsFiltered === 'no se encontró categoría'
+                    ? <h3 className="center-text">No hay ninguna categoría: {idCategory} </h3>
+                    : itemsFiltered === ''
+                        ? <h3 className="center-text">Cargando...</h3>
+                        : < ItemList items={itemsFiltered} />
             }
         </div>
     )
 };
-
-
 
 export default ItemListContainer;
