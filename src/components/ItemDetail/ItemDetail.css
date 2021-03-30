@@ -1,29 +1,50 @@
 .item-detail {
-    max-width: 40rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: solid 1px var(--color-alpha);
-    border-bottom: 2px solid var(--color-alpha);
-    position: relative;
-  }
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: solid 1px var(--color-alpha);
+  border-bottom: 2px solid var(--color-alpha);
+  position: relative;
+}
+    .item-detail .text-item-detail {
+      text-align: left;
+    }
 
-  .stock {
-    text-align: left;
-  }
+    .text-item-detail .title {
+      font-size: 2em;  
+    }
+
+    .text-item-detail .description {
+      text-align: left;
+      padding-right: 5em;
+    }
   
-  .item-detail .price {
-    top: 5%;
-  }
+    .text-item-detail .price {
+      font-size: 2.5em;
+    }
   
-  .item-detail .btn--big {
-    width: calc(50% - 0.5rem);
-    text-decoration: none;
-    line-height: 2rem;
+    .text-item-detail .btn--big {
+      width: calc(50% - 0.5rem);
+      text-decoration: none;
+      line-height: 2rem;
+    }
+
+    .item-detail .item-img-detail {
+      display: block;
+    }
+
+  .item-img-detail .img-detail {
+    width: 35rem;
   }
   
   .btn-group {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+    padding-right: 10em;
   }
   
   .btn--big {

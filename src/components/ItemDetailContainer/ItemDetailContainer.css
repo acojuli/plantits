@@ -1,7 +1,9 @@
 
 .item-detail-container {
     margin: auto;
-    max-width: 64rem;
+    display: contents;
+    flex-wrap: wrap;
+    max-width: 60rem;
     opacity: 0;
     padding-top: 40px;
   }
@@ -9,20 +11,16 @@
   .item-container {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 0 1rem 1rem;
   }
   
   .breadcrumb {
     height: 1.5rem;
-    padding: 1rem 1rem 0;
+    padding: 1rem 20rem 0;
   }
   
   .back-link {
     display: flex;
     text-align: left;
-    justify-content: flex-start;
     align-items: center;
     line-height: 1.5rem;
     vertical-align: middle;
@@ -44,5 +42,5 @@
   
   .appear{
     opacity: 1;
-    transition: opacity .5s ease;
+    transition: opacity 1s ease;
   }

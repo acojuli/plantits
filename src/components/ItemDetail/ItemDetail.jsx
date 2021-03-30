@@ -49,20 +49,20 @@ function ItemDetail({ item }) {
 
     return (
             <div className="item-detail">
-                <figure>
-                    <img src={'.' + item.pictureUrl} alt={item.title} />
-                    <IsAvailable />
-                    <figcaption>
+                <div className="item-img-detail">
+                    <img className="img-detail" src={'.' + item.pictureUrl} alt={item.title} />
+                </div>
+                    <div className="text-item-detail">
                         <h3 className="title">{item.title}</h3>
+                        <span className="price">$ {item.price}</span>
                         <p className="description">
                             {item.description}
                         </p>
                         <p className="description">
                             {item.fullDescription}
                         </p>
-                        <span className="price">$ {item.price}</span>
-                    </figcaption>
-                </figure>
+                        <IsAvailable />
+                    </div>
             </div>
     );
 }

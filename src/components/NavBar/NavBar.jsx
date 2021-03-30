@@ -31,9 +31,9 @@ class NavBar extends Component {
           <img src={this.state.active ? closeIcon : menuIcon} alt="" />
         </button>
         <ul className={`navbar__menu ${this.state.active ? 'active' : ''}`} >
-          <a className="navbar__link active" href="#home"> Home </a>
-          <a className="navbar__link" href="#about-us"> About us </a>
-          <a className="navbar__link" href="#store"> Store </a>
+          <a className="navbar__link active" href="#home"> Inicio </a>
+          <a className="navbar__link" href="#about-us"> Nosotros </a>
+          <a className="navbar__link" href="#store"> Tienda </a>
         </ul>
       </nav>
     )

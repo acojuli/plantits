@@ -1,11 +1,5 @@
 .item-count {
   display: flex;
-  flex-direction: column;
-  height: auto;
-  margin: 1rem 0;
-  padding: 1rem;
-  border: solid 1px var(--color-alpha);
-  border-bottom: 2px solid var(--color-alpha);
 }
 
 .btn--big {
@@ -19,9 +13,7 @@
 }
 
 .btn-group {
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
+  flex-direction: row-reverse;
 }
 
 .input-number::-webkit-inner-spin-button,
@@ -62,9 +54,8 @@
 }
 
 .stock {
-  text-align: center;
+  display: flex;
   font-size: 1rem;
   text-transform: uppercase;
   color: var(--color-gamma);
-  margin: 1rem 0;
 }

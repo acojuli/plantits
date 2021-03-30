@@ -15,7 +15,7 @@
   background-color: transparent;
   border: none;
   margin: 0;
-  
+  align-items: center;
 }
 
 .icon-btn:active,
