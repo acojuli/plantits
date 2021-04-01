@@ -1,15 +1,16 @@
 .item-detail {
   display: flex;
   justify-content: space-between;
-  width: 1300px;
   padding: 1rem;
   margin-bottom: 1rem;
   border: solid 1px var(--color-alpha);
   border-bottom: 2px solid var(--color-alpha);
-  position: relative;
+  position:static;
 }
     .item-detail .text-item-detail {
       text-align: left;
+      width: 50%;
+      display: inline-block;
     }
 
     .text-item-detail .title {
@@ -32,11 +33,14 @@
     }
 
     .item-detail .item-img-detail {
-      display: block;
+      display: flex;
+      width: 50%;
+      display: inline-block;
     }
 
   .item-img-detail .img-detail {
-    width: 35rem;
+    
+    display: inline-block;
   }
   
   .btn-group {
@@ -67,3 +71,10 @@
     filter: grayscale(0.5);
     cursor: not-allowed;
   }
+  @media screen and (max-width: 500px) {
+  
+    .text-item-detail,
+    .item-img-detail, {
+        width: 70%;
+    }
+}

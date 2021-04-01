@@ -50,7 +50,7 @@ function ItemDetail({ item }) {
     return (
             <div className="item-detail">
                 <div className="item-img-detail">
-                    <img className="img-detail" src={'.' + item.pictureUrl} alt={item.title} />
+                    <img className="img-detail" src={item.pictureUrl} alt={item.title} />
                 </div>
                     <div className="text-item-detail">
                         <h3 className="title">{item.title}</h3>

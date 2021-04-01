@@ -1,8 +1,7 @@
 
 .item-detail-container {
     margin: auto;
-    display: contents;
-    flex-wrap: wrap;
+    display:inline-flexbox;
     max-width: 60rem;
     opacity: 0;
     padding-top: 40px;
