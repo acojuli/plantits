@@ -31,7 +31,7 @@ function Cart(props) {
                 <h3>Tu carrito está vacío</h3>
             </div>
             <div className="cart appear" hidden={context.cart.length === 0}>
-                <div className="cart-header"><span className="cart__title">Listado de productos</span> <button onClick={() => { context.clear() }} className="cart__clear">delete all items</button> </div>
+                <div className="cart-header"><span className="cart__title">Listado de productos</span> <button onClick={() => { context.clear() }} className="cart__clear">Borrar todos los productos</button> </div>
                 <ul>
                     {
                         context.cart.map(
