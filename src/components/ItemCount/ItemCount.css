@@ -3,7 +3,7 @@
 }
 
 .btn--big {
-  display: block;
+  display: flex;
   width: 100%;
   height: 2rem;
   margin: 1rem 0;

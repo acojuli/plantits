@@ -1,44 +1,51 @@
-import React, { Component } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { useContext, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import cartIcon from "../../icons/cart-icon.svg";
 import './CartWidget.css';
 
-class CartWidget extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            active: false,
-            cartQuantity: 0
-        }
-    }
+function CartWidget (props) {
+    const context = useContext(CartContext);
+    const [active, setActive] = useState(false);
 
-    handleClick = () => {
-        this.setState({ active: !this.state.active })
+    const handleClick = () => {
+        setActive(!active);
     };
 
-    handleBlur = () => {
-        this.setState({ active: false })
+    const handleBlur = () => {
+        setTimeout(()=> setActive(false), 500);
     };
 
-    render() {
-        return (
-            <div className="cart">
-                <button className="icon-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
-                    <img src={cartIcon} className="cart__icon" alt="" />
-                    <span className={this.state.cartQuantity ? 'cart__quantity' : ''} hidden>{this.state.cartQuantity}</span>
-                </button>
-                <div className={`cart__items-container ${this.state.active ? 'active' : ''}`}>
-                    <h5>CART LIST ITEMS</h5>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                </div>
+    return (
+
+        <div className="cart-widget">
+            <button className="icon-btn" onClick={handleClick} onBlur={handleBlur}>
+                <img src={cartIcon} className="cart-widget__icon" alt="" />
+                <span className={context.totalQty === 0 ? '' : 'cart-widget__quantity appear'} hidden>{context.totalQty}</span>
+            </button>
+            <div className={`cart-widget__items-container ${active ? 'active' : ''}`}>
+                <h5>ITEMS DEL CARRITO</h5>
+                <ul>
+                    {
+                        context.cart.length === 0
+                            ? <li>Todavía no hay productos</li>
+                            : context.cart.map(
+                                (obj) => {
+                                    return (
+                                        <li key={obj.item.id}>
+                                            <span>{obj.item.title}</span>
+                                            <span>{obj.quantity}</span>
+                                        </li>
+                                    );
+                                }
+                            )
+                    }
+                </ul>
+                <NavLink to="/cart" className="btn--big">IR AL CARRITO</NavLink>
+
             </div>
-
-        );
-    }
+        </div>
+    );
 }
 
 export default CartWidget;

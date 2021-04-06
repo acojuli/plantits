@@ -35,13 +35,13 @@
   opacity: 1;
   background: var(--color-alpha);
   transition: right 0.5s ease;
+  z-index: 1;
 }
 
 .navbar__menu.active {
   right: 0;
   opacity: 1;
   transition: all 0.5s ease;
-  z-index: 1;
 }
 
 .navbar__link,

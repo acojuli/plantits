@@ -1,12 +1,26 @@
 import './ItemDetail.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
 
-function ItemDetail({ item }) {
-    const initial = 0;
+function ItemDetail(props) {
+    const initial = 1;
     const [itemsQ, setItemsQ] = useState(initial);
-    const availableStock = item.stock - itemsQ;
+    const context = useContext(CartContext);
+    const item = {
+        id: props.id,
+        category: props.item.category,
+        description: props.item.description,
+        fullDescription: props.item.fullDescription,
+        pictureUrl: props.item.pictureUrl,
+        price: props.item.price,
+        stock: props.item.stock,
+        title: props.item.title
+    };
+    const stockInCart = context.getItemQty(item.id);
+    const [maxStock, setMaxStock] = useState(item.stock - stockInCart);
+    const availableStock = maxStock - itemsQ;
 
     const Stock = () => {
         return (
@@ -14,8 +28,8 @@ function ItemDetail({ item }) {
                 <p className="stock">Stock disponible: {availableStock}</p>
                 <ItemCount min="0" max={item.stock} value={itemsQ} onAdd={onAdd} onSubstract={onSubstract} />
                 <div className="btn-group">
-                    <Link to="/cart" className={`btn--big ${itemsQ} || 'disabled'}`}>COMPRAR AHORA</Link>
-                    <button className="btn--big" disabled>AGREGAR AL CARRITO</button>
+                    <Link to="/cart" className={`btn--big`}>COMPRAR AHORA</Link>
+                    <button onClick={(e) => { onAddToCart(e) }} className={`btn--big ${itemsQ === 0 ? 'disabled' : ''}`}>AGREGAR AL CARRITO</button>
                 </div>
             </>
         )
@@ -46,6 +60,11 @@ function ItemDetail({ item }) {
     const IsAvailable = item.stock > 0
     ? Stock 
     : NoStock;
+
+    const onAddToCart = (e) => {
+        context.addItem(e, item, itemsQ);
+        setMaxStock(maxStock - itemsQ);
+    }
 
     return (
             <div className="item-detail">

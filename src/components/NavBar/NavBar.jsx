@@ -3,7 +3,7 @@ import logo from "../../logo.svg";
 import closeIcon from "../../icons/close-icon.svg";
 import menuIcon from "../../icons/menu-icon.svg";
 import "./NavBar.css"
-import Login from '../Login/Login';
+//import Login from '../Login/Login';
 import CartWidget from '../CartWidget/CartWidget';
 
 class NavBar extends Component {
@@ -25,7 +25,7 @@ class NavBar extends Component {
     return (
       <nav className='navbar'>
         <img src={logo} className="navbar__logo" alt="logo" />
-        <Login />
+
         <CartWidget />
         <button className="icon-btn menu-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
           <img src={this.state.active ? closeIcon : menuIcon} alt="" />
