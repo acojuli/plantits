@@ -4,7 +4,9 @@ import closeIcon from "../../icons/close-icon.svg";
 import menuIcon from "../../icons/menu-icon.svg";
 import "./NavBar.css"
 //import Login from '../Login/Login';
+import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
+import Login from '../Login/Login';
 
 class NavBar extends Component {
   constructor(props) {
@@ -18,14 +20,15 @@ class NavBar extends Component {
 
   handleBlur = () => {
     this.setState({ active: false })
-    console.log("blur");
   };
 
   render() {
     return (
       <nav className='navbar'>
+        <NavLink to={'/'}>
         <img src={logo} className="navbar__logo" alt="logo" />
-
+        </NavLink>
+        <Login />
         <CartWidget />
         <button className="icon-btn menu-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
           <img src={this.state.active ? closeIcon : menuIcon} alt="" />

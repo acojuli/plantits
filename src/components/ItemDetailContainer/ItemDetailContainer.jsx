@@ -5,7 +5,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import backIcon from "../../icons/back-icon.svg";
 
 function ItemDetailContainer() {
-  const [item, setItems] = useState("");
+  const [item, setItems] = useState('');
   let { id } = useParams();
 
   const getItem = (id) => {
@@ -34,7 +34,7 @@ function ItemDetailContainer() {
         </Link>
       </div>
       <div className="item-container" >
-        <ItemDetail item={item} />
+        <ItemDetail item={item} id={id} />
       </div>
     </div>
     }

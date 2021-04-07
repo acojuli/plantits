@@ -20,13 +20,13 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="cart">
+            <div className="login">
                 <button className="icon-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
                     <img src={loginIcon} className="login__icon" alt="" />
                 </button>
                 <div className={`login__session-container ${this.state.active ? 'active' : ''}`}>
                     <h5>INICIAR SESIÓN</h5>
-                    <h5>CREAR CUENTA</h5>
+                    <p><h5>CREAR CUENTA</h5></p>
                 </div>
             </div>
 
