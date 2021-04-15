@@ -89,23 +89,18 @@ var items = [
 var categories = [
     {
         name: "Sansevierias",
-        pictureUrl: "./images/category-1.png",
     },
     {
         name: "Monsteras",
-        pictureUrl: "./images/category-2.png",
     },
     {
         name: "Peperomias",
-        pictureUrl: "./images/category-3.png",
     },
     {
         name: "Alocasias",
-        pictureUrl: "./images/category-4.png",
     },
     {
         name: "Dieffenbachias",
-        pictureUrl: "./images/category-5.png",
     },   
 ];
 

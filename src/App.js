@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Cart from "./components/Cart/Cart";
 import NotFound from "./components/NotFound/NotFound";
 import {CartProvider} from "./context/CartContext";
+import Checkout from "./components/Checkout/Checkout";
+import Orders from "./components/Orders/Orders";
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
           <Switch>
             <Route exact path="/">
               <ItemListContainer />
+            </Route>
+            <Route path="/orders">
+              <Orders />
+            </Route>
+            <Route path="/checkout">
+              <Checkout />
             </Route>
             <Route path="/cart">
               <Cart />

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from "../../logo.svg";
 import closeIcon from "../../icons/close-icon.svg";
 import menuIcon from "../../icons/menu-icon.svg";
 import "./NavBar.css"
-//import Login from '../Login/Login';
-import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import Login from '../Login/Login';
+import OrdersWidget from '../OrdersWidget/OrdersWidget';
 
 class NavBar extends Component {
   constructor(props) {
@@ -30,13 +30,14 @@ class NavBar extends Component {
         </NavLink>
         <Login />
         <CartWidget />
+        <OrdersWidget />
         <button className="icon-btn menu-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
           <img src={this.state.active ? closeIcon : menuIcon} alt="" />
         </button>
         <ul className={`navbar__menu ${this.state.active ? 'active' : ''}`} >
-          <a className="navbar__link active" href="#home"> Inicio </a>
-          <a className="navbar__link" href="#about-us"> Nosotros </a>
-          <a className="navbar__link" href="#store"> Tienda </a>
+          <NavLink to={'/'} className="navbar__link " exact activeClassName="active" > Inicio </NavLink>
+          <NavLink to={'/about-us'} className="navbar__link " exact> Nosotros </NavLink>
+          <NavLink to={'/store'} className="navbar__link " exact> Tienda </NavLink>
         </ul>
       </nav>
     )
