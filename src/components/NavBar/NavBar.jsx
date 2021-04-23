@@ -28,9 +28,7 @@ class NavBar extends Component {
         <NavLink to={'/'}>
         <img src={logo} className="navbar__logo" alt="logo" />
         </NavLink>
-        <Login />
-        <CartWidget />
-        <OrdersWidget />
+
         <button className="icon-btn menu-btn" onClick={this.handleClick} onBlur={this.handleBlur}>
           <img src={this.state.active ? closeIcon : menuIcon} alt="" />
         </button>
@@ -38,6 +36,9 @@ class NavBar extends Component {
           <NavLink to={'/'} className="navbar__link " exact activeClassName="active" > Inicio </NavLink>
           <NavLink to={'/about-us'} className="navbar__link " exact> Nosotros </NavLink>
           <NavLink to={'/store'} className="navbar__link " exact> Tienda </NavLink>
+          <Login />
+        <CartWidget />
+        <OrdersWidget />
         </ul>
       </nav>
     )
