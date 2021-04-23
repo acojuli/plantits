@@ -81,7 +81,7 @@ function ItemListContainer() {
                 itemsFiltered === 'no se encontró categoría'
                     ? <h3 className="center-text">No hay ninguna categoría: {idCategory} </h3>
                     : itemsFiltered === ''
-                        ? <h3></h3>
+                        ? <h3 className="center-text">Cargando...</h3>
                         : < ItemList items={itemsFiltered} />
             }
         </div>
