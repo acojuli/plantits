@@ -9,12 +9,6 @@
     transition: all 0.3s ease;
   }
   
-  @property --percent {
-    syntax: "<percentage>";
-    initial-value: 0%;
-    inherits: false;
-  }
-  
   .checkout input {
     --percent: 0%;
     box-sizing: border-box;
@@ -43,7 +37,7 @@
   .checkout input:not(:placeholder-shown) {
     /* box-shadow: inset 0 0 0 0 white, inset 0 -1px 0 0 lightgray; */
     --percent: 100%;
-    transition: --percent 0.5s ease-in-out;
+    transition: --percent 1.5s ease-in-out;
     border-image-source: linear-gradient(
       90deg,
       var(--color-gamma) var(--percent),

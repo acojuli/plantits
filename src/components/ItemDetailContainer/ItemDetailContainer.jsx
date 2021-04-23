@@ -5,6 +5,7 @@ import { getFirestore } from '../../firebase';
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import backIcon from "../../icons/back-icon.svg";
+import Container from '@material-ui/core/Container';
 
 function ItemDetailContainer() {
   const [item, setItem] = useState('');
@@ -33,9 +34,9 @@ function ItemDetailContainer() {
                 <span className="back-link__text">Volver al inicio </span>
               </Link>
             </div>
-            <div className="item-container" >
+            <Container fixed>
               <ItemDetail item={item} id={id} />
-            </div>
+            </Container>
           </div>
       }
     </>

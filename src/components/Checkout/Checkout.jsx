@@ -80,7 +80,7 @@ function Checkout(props) {
                 <input type="email" name="email" onChange={handleInputChange} id="email" placeholder=" " />
                 <label htmlFor="email" >Email</label>
 
-                <div className="checkout__title">REVIEW YOUR ORDER</div>
+                <div className="checkout__title">REVISE SU ORDEN</div>
                 <ul className="checkout-order">
                     <li className="checkout-order__head">
                         <span >Título</span>
