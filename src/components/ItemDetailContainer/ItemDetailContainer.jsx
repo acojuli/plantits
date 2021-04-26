@@ -6,6 +6,8 @@ import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import backIcon from "../../icons/back-icon.svg";
 import Container from '@material-ui/core/Container';
+import Loader from "../Loader/Loader"
+
 
 function ItemDetailContainer() {
   const [item, setItem] = useState('');
@@ -26,7 +28,7 @@ function ItemDetailContainer() {
     <>
       {
         item === ''
-          ? <h3 className="center-text">Cargando...</h3>
+          ? <Loader/>
           : <div className={`item-detail-container ${item ? 'appear' : 'Loading...'}`}>
             <div className="breadcrumb">
               <Link to="/" className="back-link">

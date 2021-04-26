@@ -4,6 +4,7 @@ import './Orders.css';
 import backIcon from "../../icons/back-icon.svg";
 import deleteIcon from "../../icons/delete-icon.svg";
 import { getFirestore } from '../../firebase';
+
 /* eslint-disable react-hooks/exhaustive-deps */
 
 function Orders() {

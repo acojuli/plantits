@@ -4,6 +4,7 @@ import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import ItemCategories from "../ItemCategories/ItemCategories";
 import Loader from "../Loader/Loader"
+import Progress from "../Loader/Progress"
 import { getFirestore } from '../../firebase';
 
 function ItemListContainer() {
@@ -81,7 +82,7 @@ function ItemListContainer() {
                 itemsFiltered === 'no se encontró categoría'
                     ? <h3 className="center-text">No hay ninguna categoría: {idCategory} </h3>
                     : itemsFiltered === ''
-                        ? <h3 className="center-text">Cargando...</h3>
+                        ? <Progress/>
                         : < ItemList items={itemsFiltered} />
             }
         </div>
