@@ -1,5 +1,5 @@
 # Plantits - Final Project of the React js course by CoderHouse
-Plants e-commerce app.
+- Demo [Link](https://plantits.netlify.app/) deploy with Netlify
 
 ## Technologies
 

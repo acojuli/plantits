@@ -3,7 +3,7 @@
     padding: 1rem;
     margin: 1rem auto;
     border: solid 1px var(--color-alpha);
-    border-top: 3px solid var(--color-alpha);
+    border-bottom: 3px solid var(--color-alpha);
     position: relative;
     text-align: left;
     transition: all 0.3s ease;
