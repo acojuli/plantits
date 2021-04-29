@@ -61,7 +61,7 @@ function Orders() {
                 (orders.length === 0)
                     ? <h2 className="appear" > No hay ordenes aún</h2>
                     : <div className="orders appear" >
-                        <div className="orders__title">ORDEN</div>
+                        <div className="orders__title">ORDENES DE COMPRA</div>
                         {
                             orders.map(
                                 (order) => {
@@ -70,9 +70,12 @@ function Orders() {
                                             <button onClick={() => { deleteOrder(order.id) }} className="order__delete">
                                                 <img src={deleteIcon} className="delete-icon" alt="" />
                                             </button>
-                                            <h4>ORDEN</h4>
+                                            <h5>ORDEN DE COMPRA</h5>
                                             <p className="order__id">({order.id}) </p>
                                             <ul className="order__buyer">
+                                                <li>
+                                                    <b>Datos personales </b>
+                                                </li>
                                                 <li>
                                                     <b>Nombre: </b> {order.buyer.name}
                                                 </li>

@@ -3,7 +3,6 @@ import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
-import Container from '@material-ui/core/Container';
 
 function ItemDetail(props) {
     const initial = 1;
@@ -69,10 +68,9 @@ function ItemDetail(props) {
 
     return (
         <React.Fragment>
-        <Container fixed>
             <div className="item-detail">
                 <div className="item-img-detail">
-                    <img className="img-detail" src={item.pictureUrl} alt={item.title} />
+                    <img src={item.pictureUrl} alt={item.title} />
                 </div>
                     <div className="text-item-detail">
                         <h3 className="title">{item.title}</h3>
@@ -86,7 +84,6 @@ function ItemDetail(props) {
                         <IsAvailable />
                     </div>
             </div>
-        </Container>
         </React.Fragment>
     );
 }

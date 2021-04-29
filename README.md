@@ -1,5 +1,5 @@
 # Plantits - Final Project of the React js course by CoderHouse
-- Demo [Link](https://plantits.netlify.app/) deploy with Netlify
+- Demo [Link](https://plantits.netlify.app/) deployed with Netlify
 
 ## Technologies
 

@@ -32,10 +32,14 @@ function CartWidget (props) {
                             : context.cart.map(
                                 (obj) => {
                                     return (
-                                        <li key={obj.item.id}>
-                                            <span>{obj.item.title}</span>
-                                            <span>{obj.quantity}</span>
+                                        <li key={obj.item.id} className="cart-widget">
+                                            <img src={obj.item.pictureUrl} alt={obj.item.title} className="cart-item__img" />
+                                            <div className="cart-item__title">
+                                                <h5>{obj.item.title}</h5>
+                                            <span>Cantidad: {obj.quantity}</span>
+                                            </div>
                                         </li>
+                                        
                                     );
                                 }
                             )
