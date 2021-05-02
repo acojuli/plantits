@@ -1,7 +1,7 @@
 # Plantits - Final Project of the React js course by CoderHouse
 - Demo [Link](https://plantits.netlify.app/) deployed with Netlify
-- Video [Link] (https://youtu.be/JNSqjS0WdR4) uploaded to Youtube
-- Gif [Link] (https://drive.google.com/file/d/1pQT91FfH2yD79pRqPuboNGLJQ33POCw1/) uploaded to Google Drive
+- Video [Link](https://youtu.be/JNSqjS0WdR4) uploaded to Youtube
+- Gif [Link](https://drive.google.com/file/d/1pQT91FfH2yD79pRqPuboNGLJQ33POCw1/) uploaded to Google Drive
 
 ## Technologies
 
