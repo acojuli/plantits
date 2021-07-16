@@ -9,7 +9,10 @@ import Loader from "../Loader/Loader"
 
 
 function ItemDetailContainer() {
+
+  // save the item state
   const [item, setItem] = useState('');
+  // the useParams read the url and take the id
   let { id } = useParams();
 
   const getItem = (id) => {

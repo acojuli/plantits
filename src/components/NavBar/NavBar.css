@@ -5,12 +5,13 @@
   height: 2rem;
   align-items: baseline;
   font-size: 1rem;
-  padding: 4rem;
+  padding: 2rem;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar__logo {
   width: 12rem;
-  margin: 1rem 0 0 1rem;
+  margin: -1rem 0 0 1rem;
   cursor: pointer;
   position: absolute;
   padding-top: 2.5rem;
@@ -30,7 +31,7 @@
   top: 0;
   right: -16rem;
   padding: 0;
-  margin: 0;
+  margin: -3px;
   padding-top: 5rem;
   opacity: 1;
   background: var(--color-alpha);

@@ -12,10 +12,14 @@ import Orders from "./components/Orders/Orders";
 function App() {
   return (
     <div className="App">
+      {/* wrap the whole app in the provider to take the data in any component */}
       <CartProvider>
+        {/* wrap the app in BrowerRouter to navigate */}
         <BrowserRouter>
+        {/* leave the navbar out of the switch beacause I want it to always be visible */}
           <NavBar />
           <Switch>
+            {/* use the exact path beacause otherwise when reading the slash it will always go to this link */}
             <Route exact path="/">
               <ItemListContainer />
             </Route>
@@ -28,6 +32,7 @@ function App() {
             <Route path="/cart">
               <Cart />
             </Route>
+            {/* to be able to navigate with parameters we use ":" */}
             <Route path="/category/:id">
               <ItemListContainer />
             </Route>

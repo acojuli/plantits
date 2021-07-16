@@ -1,3 +1,4 @@
+// useParams is a hook that let you access the parameters of the current route
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./ItemListContainer.css";
@@ -8,6 +9,7 @@ import { getFirestore } from '../../firebase';
 
 function ItemListContainer() {
     let [categories, setCategories] = useState('');
+// use this state to save all the productos
     let [items, setItems] = useState('');
     let [itemsFiltered, setItemsFiltered] = useState('');
     let { id: idCategory } = useParams();
