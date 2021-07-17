@@ -1,8 +1,9 @@
 import { createContext, useState, useEffect } from 'react';
-
+// Prepare the context
 const CartContext = createContext();
 
 function CartProvider({ defaultValue = [], children }) {
+    // I prepare the status of my cart. Here I will save every time someone saves something new.
     const [cart, setCart] = useState([]);
     const [totalQty, setTotalQty] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -45,6 +46,7 @@ function CartProvider({ defaultValue = [], children }) {
     }
 
     const clear = () => {
+        // Save an empty array as state
         setCart([]);
         setTotalQty(0);
         setTotalPrice(0);
@@ -95,7 +97,7 @@ function CartProvider({ defaultValue = [], children }) {
         getTotalQty();
         getTotalPrice();
     });
-
+    // I wrap children, which will be all the components that are parsed within my provider.
     return (
         <CartContext.Provider value={{ cart, setCart, addItem, substractItem, removeItem, clear, isInCart, getItemQty, totalQty, totalPrice }}>
             {children}
