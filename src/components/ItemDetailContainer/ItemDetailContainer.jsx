@@ -14,7 +14,7 @@ function ItemDetailContainer() {
   const [item, setItem] = useState('');
   // the useParams read the url and take the id
   let { id } = useParams();
-
+  // Get only one product by id
   const getItem = (id) => {
     const db = getFirestore();
     db.collection('items').doc(id).get().then((snapshot) => {

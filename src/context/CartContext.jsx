@@ -10,6 +10,7 @@ function CartProvider({ defaultValue = [], children }) {
 
     const addItem = (e, item, quantity) => {
         e.preventDefault();
+        // The old product is in the cart?
         let pos = isInCart(item.id);
         if (pos >= 0) {
             let updatedCart = cart;

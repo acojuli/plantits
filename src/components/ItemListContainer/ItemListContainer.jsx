@@ -15,12 +15,16 @@ function ItemListContainer() {
     let { id: idCategory } = useParams();
    
     const getAll = () => {
+        // Conection to the BD
         const db = getFirestore();
+        // Getting the colection of products
         const itemsCollection = db.collection('items');
-        itemsCollection.get().then((querySnapshot) => {
+        itemsCollection.get()
+        .then((querySnapshot) => {
             if (querySnapshot.size === 0) {
                 console.log('No results');
             }
+            // Do a map of results and add the id and the data
             let snapshot = querySnapshot.docs.map(doc => {
                 return { ...doc.data(), id: doc.id }
             });
@@ -32,7 +36,8 @@ function ItemListContainer() {
         });
 
         const categoriesCollection = db.collection('categories');
-        categoriesCollection.get().then((querySnapshot) => {
+        categoriesCollection.get()
+        .then((querySnapshot) => {
             if (querySnapshot.size === 0) {
                 console.log('No results');
             }
